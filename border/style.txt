@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.service{
+    position: relative;
+}
+.service-title{
+    height: 150px;
+    width: 392px;
+    position: absolute;
+    top:4px;
+    left: 4px;
+    border-radius: 6px;
+    background: white;
+    z-index: 5;
+}
+.service-border {
+    position: absolute;
+    height: 150px;
+    width: 400px;
+    text-align: center;
+    border-radius: 6px;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        10% 50%,
+        10% 100%,
+        0% 100%
+
+    );
+    z-index: 4;
+}
+
+
+.service-title::before{
+    content: url('service-1.png');
+    position: absolute;
+    top: 92%;
+    left: -6%;
+    width: 15px;
+    height: 15px;
+    
+}
+
+.service-title::after{
+    content: '';
+    position: absolute;
+    top: 63px;
+    left: 386px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FE8D7B;
+    box-shadow: 0 0 0 5px #FE8D7B33,
+    0 0 0 10px #FE8D7B22,
+    0 0  20px #FE8D7B11,
+    0 0  50px #FE8D7B;
+}

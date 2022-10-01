@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Border animation</title>
+</head>
+<body>
+    <div class="service">
+        <div class="service-title">
+            service 11
+        </div>
+        <div class="service-border">
+            
+        </div>
+    </div>
+
+    <script>
+        const currentnumber = 0;
+        const gardian = (i)=> ` linear-gradient(90deg,#FE8D7B ${i}%, white 0%)`;
+        let i=-10;
+        let interval = setInterval(()=>{
+            console.log(i)
+            let border = document.getElementsByClassName("service-border")[0];
+            i++;
+            document.currentnumber=i;
+            border.style.backgroundImage= gardian(i)
+            if (i==100) {
+                clearInterval(interval)
+            }
+        },20)
+    </script>
+</body>
+</html>
